@@ -1,0 +1,29 @@
+﻿@using Blazor.Runtime.Interop
+<h1>SinjulMSBH Bootstrap ..</h1>
+<p>This SinjulMSBH component demonstrates calling a JavaScript library, bootstrap.js ..</p>
+<button type="button" class="btn btn-primary" @onclick( ShowModal )>
+      Show SinjulMSBH Modal Dialog ..
+</button>
+<div id="my-modal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+            <div class="modal-content">
+                  <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">SinjulMSBH Modal title</h4>
+                  </div>
+                  <div class="modal-body">
+                        <p>SinjulMSBH Contents go here ..</p>
+                  </div>
+                  <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                  </div>
+            </div>
+      </div>
+</div>
+@functions {
+void ShowModal ( )
+{
+      var elem = JavaScript.Document.GetElementById("my-modal");
+      new Modal( elem ).Show( );
+}
+}

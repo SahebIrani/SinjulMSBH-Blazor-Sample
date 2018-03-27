@@ -1,0 +1,32 @@
+﻿[
+      {
+            "DateFormatted": "06/05/2017",
+            "TemperatureC": 1,
+            "Summary": "Sinjul",
+            "TemperatureF": 33
+      },
+      {
+            "DateFormatted": "07/05/2017",
+            "TemperatureC": 14,
+            "Summary": "MSBH",
+            "TemperatureF": 57
+      },
+      {
+            "DateFormatted": "08/05/2017",
+            "TemperatureC": -13,
+            "Summary": "Jack",
+            "TemperatureF": 9
+      },
+      {
+            "DateFormatted": "09/05/2017",
+            "TemperatureC": -16,
+            "Summary": "Slater",
+            "TemperatureF": 4
+      },
+      {
+            "DateFormatted": "01/02/2018",
+            "TemperatureC": -2,
+            "Summary": "SinjulMSBH",
+            "TemperatureF": 29
+      }
+]

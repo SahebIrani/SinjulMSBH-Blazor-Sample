@@ -1,0 +1,50 @@
+﻿<h1>SinjulMSBH List <span class="badge badge-danger">(@items.Count)</span></h1>
+
+<ul class="list-group">
+      @foreach ( var item in items )
+      {
+            <li class="list-group-item list-group-item-info text-center">
+                  <h4 class="text-info">ID = <strong class="text-success">@item.Id</strong></h4>
+                  <h4 class="text-info">Text = <strong class="text-success">@item.Text</strong></h4>
+            </li>
+      }
+</ul>
+
+<span class="text-danger text-center">@AlertText</span>
+
+<div class="form-inline">
+      <input @bind( NewText ) class="form-control" placeholder="Type for add item here .." />
+
+      <button class="btn btn-primary" @onclick( AddItem )> Add Item </button><br /><br /><br />
+</div>
+
+@functions  {
+
+string NewText;
+string AlertText;
+int NumberId = 0;
+
+List<SinjulMSBH> items = new List<SinjulMSBH>();
+
+void AddItem ( )
+{
+      if ( !string.IsNullOrWhiteSpace( NewText ) )
+      {
+            NumberId++;
+            items.Add( new SinjulMSBH { Id= NumberId , Text= NewText } );
+            NewText = null;
+            AlertText = null;
+      }
+      else
+      {
+            AlertText = "Please Enter A Field ..";
+      }
+}
+
+class SinjulMSBH
+{
+      public int Id { get; set; }
+      public string Text { get; set; }
+}
+
+}
